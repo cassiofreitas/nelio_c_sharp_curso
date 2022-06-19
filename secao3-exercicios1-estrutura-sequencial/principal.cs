@@ -15,6 +15,7 @@ namespace secao_3_exercicios1_estrutura_sequencial
             {
                 Console.Clear();
                 Console.Beep();
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.WriteLine("Escolha:");
                 MenuIndice = 0;
                 foreach (string MenuOption in MenuOptions)
