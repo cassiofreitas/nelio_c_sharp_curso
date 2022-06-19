@@ -9,7 +9,7 @@ namespace secao_3_exercicios1_estrutura_sequencial
             int option;
             int MenuIndice;
             const int ValueSaida = 99;
-            List<string> MenuOptions = new() { "exercicio01", "exercicio02", "exercicio03", "exercicio04", "exercicio05", "sair" };
+            List<string> MenuOptions = new() { "exercicio01", "exercicio02", "exercicio03", "exercicio04", "exercicio05", "exercicio06","sair" };
 
             do
             {
@@ -49,6 +49,9 @@ namespace secao_3_exercicios1_estrutura_sequencial
                         break;
                     case 5:
                         exercicio05();
+                        break;
+                    case 6:
+                        exercicio06();
                         break;
                     case ValueSaida:
                         Environment.Exit(0);
@@ -144,6 +147,29 @@ namespace secao_3_exercicios1_estrutura_sequencial
             TotalPagar = (qtde1 * preco1) + (qtde2 * preco2);
 
             Console.WriteLine($"VALOR A PAGAR: R$ {TotalPagar.ToString("F2", CultureInfo.InvariantCulture)}");
+        }
+        static void exercicio06()
+        {
+            string[] DadosFiguras;
+            double A, B, C, triangulo, circulo, trapezio, quadrado, retangulo;
+     
+            Console.WriteLine("Digite as medidas A, B e C e <enter>");
+            DadosFiguras = Console.ReadLine().Split(' ');
+            A = double.Parse(DadosFiguras[0], CultureInfo.InvariantCulture);
+            B = double.Parse(DadosFiguras[1], CultureInfo.InvariantCulture);
+            C = double.Parse(DadosFiguras[2], CultureInfo.InvariantCulture);
+
+            triangulo = (A * C) / 2;
+            circulo = Math.PI * (Math.Pow(C, 2));
+            trapezio = ((A+B) * C) / 2;
+            quadrado = Math.Pow(B, 2);
+            retangulo = A * B;
+
+            Console.WriteLine($"TRIANGULO: {triangulo.ToString("F3", CultureInfo.InvariantCulture)}");
+            Console.WriteLine($"CIRCULO: {circulo.ToString("F3", CultureInfo.InvariantCulture)}");
+            Console.WriteLine($"TRAPEZIO: {trapezio.ToString("F3", CultureInfo.InvariantCulture)}");
+            Console.WriteLine($"QUADRADO: {quadrado.ToString("F3", CultureInfo.InvariantCulture)}");
+            Console.WriteLine($"RETANGULO: {retangulo.ToString("F3", CultureInfo.InvariantCulture)}");
         }
     }
 }
