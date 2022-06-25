@@ -23,11 +23,16 @@ namespace secao4_aula01_classe_atributo_metodo_triangulo
 
             //formula de Heron: area = sqrt(p * (p-a) * (p-b) * (p-c) onde p = ( a + b + c ) /2;
 
-            double p = (x.A + x.B + x.C) / 2.0;
-            double areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
+            // DELEGATED a responsabilida pelo cálculo de área para a Classe Triângulo
+            // REAPROVEITAMENTO de código, não repetindo fórmulas e cálculos
+            //double p = (x.A + x.B + x.C) / 2.0;
+            //double areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
 
-            p = (y.A + y.B + y.C) / 2.0;
-            double areaY = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p - y.C));
+            //p = (y.A + y.B + y.C) / 2.0;
+            //double areaY = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p - y.C));
+
+            double areaX = x.Area();
+            double areaY = y.Area();
 
             Console.WriteLine($"Área de X = {areaX.ToString("F4", CultureInfo.InvariantCulture)}");
             Console.WriteLine($"Área de Y = {areaY.ToString("F4", CultureInfo.InvariantCulture)}");
