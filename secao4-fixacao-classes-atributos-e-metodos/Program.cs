@@ -19,6 +19,7 @@ namespace secao4_fixacao_classes_atributos_e_metodos
             Console.WriteLine($"DIAGONAL = {R.Diagonal().ToString("F2", CultureInfo.InvariantCulture)}");
             */
 
+            /*
             Funcionario F = new Funcionario();
 
             Console.Write("Nome: ");
@@ -34,6 +35,18 @@ namespace secao4_fixacao_classes_atributos_e_metodos
             porcentagem = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             F.AumentarSalario(porcentagem);
             Console.WriteLine($"\nDados Atualizados: {F}",CultureInfo.InvariantCulture);
+            */
+
+            Aluno A = new Aluno();
+
+            Console.Write("Nome do aluno: ");
+            A.Name = Console.ReadLine();
+            Console.WriteLine("Digite as três notas do aluno: ");
+            A.NotasDoAluno[0] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            A.NotasDoAluno[1] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            A.NotasDoAluno[2] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine($"NOTA FINAL = {A.CalculaNotaFinal().ToString("F2",CultureInfo.InvariantCulture)}");
+            Console.WriteLine(A.IsApproved());
         }
     }
 }
